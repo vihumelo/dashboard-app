@@ -1,0 +1,14 @@
+.container {
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+
+.evenrow {
+  background-color: #f2f2f2; /* Cor para linhas pares */
+}
+
+.oddrow {
+  background-color: #ffffff; /* Cor para linhas ímpares */
+}

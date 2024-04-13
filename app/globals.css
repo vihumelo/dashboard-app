@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Loew bold";
+  src: url("../public/fonts/Loew-Bold.otf") format("opentype");
+  font-weight: bold; /* Defina o peso da fonte como negrito */
+}
+
+@font-face {
+  font-family: "Loew";
+  src: url("../public/fonts/Loew-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  background-color: #f1f5fb;
+  font-family: "BrixSans";
+}
+
+.ant-table-tbody > tr:nth-child(odd) {
+  background-color: white; /* Cor de fundo para linhas ímpares */
+}
+
+.ant-table-tbody > tr:nth-child(even) {
+  background-color: #f9fafe; /* Cor de fundo para linhas pares */
+}
+
+.ant-table {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
+
+.ant-table-thead > tr > th {
+  color: #3c3c5a !important;
+  font-family: "Loew bold" !important;
+}
+
+.ant-table-cell {
+  font-family: "Loew";
+  font-weight: normal;
+  color: #60667a !important;
+  font-size: 13px;
+}
+
+.custom-tag {
+  font-size: 13px;
+}
+
+.notify-button {
+  font-family: "Loew";
+  font-size: 12px;
+  color: #60667a;
+  background-color: #ecf0f8;
+}
+
+.notify-button:hover {
+  background-color: #012a4a !important;
+}
+
+.menu-button {
+  font-family: "Loew bold";
+  font-size: 13px;
+  color: white;
+  background-color: #013a63;
+}
+
+.menu-button:hover {
+  background-color: #013a63 !important;
+}
+
+.menu-button-text {
+  font-family: "Loew";
+  font-size: 13px;
+  color: white;
+}
+
+.menu-button-text:hover {
+  color: #a1cee1 !important;
+}
+
+.dropfilter {
+  font-family: "Loew";
+  font-size: 13px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
