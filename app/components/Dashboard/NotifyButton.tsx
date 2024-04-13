@@ -2,7 +2,6 @@ import { Button } from "antd";
 import React, { useState } from "react";
 import jsonData from "./data";
 
-// Defina a interface DataItem aqui
 interface DataItem {
   comunicacao: number;
   registro: string;

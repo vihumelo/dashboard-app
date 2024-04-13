@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Loew bold";
   src: url("../public/fonts/Loew-Bold.otf") format("opentype");
-  font-weight: bold; /* Defina o peso da fonte como negrito */
+  font-weight: bold;
 }
 
 @font-face {

@@ -1,9 +1,9 @@
 .topbar {
   height: 85px;
   background-color: #012a4a;
-  display: flex; /* Torna o container da barra um flex container */
-  justify-content: center; /* Alinha os itens horizontalmente ao centro */
-  align-items: center; /* Alinha os itens verticalmente ao centro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .floatbar {
   margin-top: 0px;
@@ -11,13 +11,13 @@
   background-color: white;
   border-bottom: 3px solid #e4e5ea;
   display: flex;
-  align-items: center; /* Alinha os itens verticalmente no centro */
+  align-items: center;
 }
 
 .dropfilter {
   display: flex;
-  margin-left: auto; /* Isso empurra o elemento para a direita */
-  margin-right: 200px; /* Mantém uma margem fixa à direita */
+  margin-left: auto;
+  margin-right: 200px;
 }
 
 .logoContainer {
@@ -35,4 +35,14 @@
   flex-grow: 1;
   justify-content: center;
   margin-right: 150px;
+}
+
+@media screen and (max-width: 950px) {
+  .topbar {
+    width: 950px;
+  }
+
+  .floatbar {
+    width: 950px;
+  }
 }

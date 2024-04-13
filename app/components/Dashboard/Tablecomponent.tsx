@@ -16,7 +16,7 @@ interface DataType {
   key: React.Key;
   tag: JSX.Element;
   registro: string;
-  interface: string; // Renomeado de hora_execucao para interface
+  interface: string;
   exame: string;
   resultado: string;
   action: JSX.Element;
