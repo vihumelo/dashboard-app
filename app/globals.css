@@ -1,19 +1,7 @@
-@font-face {
-  font-family: "Loew bold";
-  src: url("../public/fonts/Loew-Bold.otf") format("opentype");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Loew";
-  src: url("../public/fonts/Loew-Regular.otf") format("opentype");
-  font-weight: normal;
-}
-
 body {
   margin: 0;
   background-color: #f1f5fb;
-  font-family: "BrixSans";
+  font-family: Arial, sans-serif;
 }
 
 .ant-table-tbody > tr:nth-child(odd) {
@@ -30,11 +18,10 @@ body {
 
 .ant-table-thead > tr > th {
   color: #3c3c5a !important;
-  font-family: "Loew bold" !important;
+  font-weight: 700 !important;
 }
 
 .ant-table-cell {
-  font-family: "Loew";
   font-weight: normal;
   color: #60667a !important;
   font-size: 13px;
@@ -45,7 +32,6 @@ body {
 }
 
 .notify-button {
-  font-family: "Loew";
   font-size: 12px;
   color: #60667a;
   background-color: #ecf0f8;
@@ -67,7 +53,6 @@ body {
 }
 
 .menu-button-text {
-  font-family: "Loew";
   font-size: 13px;
   color: white;
 }
@@ -77,7 +62,6 @@ body {
 }
 
 .dropfilter {
-  font-family: "Loew";
   font-size: 13px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }

@@ -1,10 +1,4 @@
-import Topbar from "./components/TopBar/Topbar";
-import Dashboard from "./pages/Dashboard";
+import DashboardApp from "../components/dashboard/DashboardApp";
 export default function Home() {
-  return (
-    <>
-      <Topbar />
-      <Dashboard />
-    </>
-  );
+  return <DashboardApp />;
 }
