@@ -1,21 +1,59 @@
-# **Dashboard de Resultados Críticos**
+# Dashboard de Resultados Críticos
 
-### Descrição do Projeto
+Demonstração frontend de um painel para acompanhar resultados laboratoriais e seus prazos de atendimento. O projeto usa Next.js, React, TypeScript e Ant Design.
 
-Este é um **dashboard** demonstrativo criado para monitorar o tempo de atraso e acompanhar resultados críticos em um laboratório de análises clínicas. É apenas um modelo que pode ser facilmente implementado a um banco de dados. Foi desenvolvido para demonstrar minhas habilidades em programação frontend. Ele pode ser visto on-line aqui: https://dashboard-app-panicos.vercel.app/
+## Escopo
 
-### Tecnologias Utilizadas
+- Exibe registros fictícios de exames, com número de registro, exame, resultado, setor, unidade e horário de execução.
+- Calcula o tempo restante de um prazo de 60 minutos. Resultados com até 30 minutos restantes recebem status de atenção; os que atingem ou ultrapassam o prazo são marcados como atrasados.
+- Permite filtrar as unidades pelo menu superior e os setores pelo filtro da tabela.
+- Simula a notificação de um resultado: ao acioná-la, o registro é marcado como comunicado e removido da lista ativa.
+- Atualiza o relógio usado nos cálculos a cada 10 segundos.
 
-Nesta demonstração, utilizei as seguintes tecnologias:
+Os dados são gerados localmente e são fictícios. A notificação é apenas uma demonstração: não envia mensagens nem grava alterações. O estado é mantido na memória do navegador e não há backend ou persistência. A tela implementada é o dashboard; “Relatórios” e “Consultas” aparecem no menu, mas ainda não têm páginas ou ações.
 
-- **Next.JS**: Framework para desenvolvimento de aplicações web e o Ant Design para criação de componentes interativos.
-- **TypeScript**: Utilizado nos arquivos "data.ts" para simular a resposta de um backend. É arquivo que gera de forma artificial e aleatório os resultados do laboratório, e envia para o "frontend" em formato JSON.
-- **CSS**: Utilizado para estilizar a página (não está responsivo pois esta aplicação é voltada para aplicações desktop).
+## Requisitos
 
-### Instalação
+- Node.js 24 (ou uma versão compatível com Next.js 16.4).
+- npm.
 
-Para configurar o projeto em sua máquina local, siga estas etapas:
+## Desenvolvimento
 
-1. Faça o clone deste repositório para o seu diretório local.
-2. Execute o comando `npm install` para instalar as dependências necessárias.
-3. Após a instalação, utilize o comando `npm run dev` para iniciar o projeto. Você poderá acessá-lo em `localhost:3000`.
+```bash
+npm ci
+npm run dev
+```
+
+Abra [http://localhost:3000](http://localhost:3000).
+
+## Comandos
+
+```bash
+npm run dev          # servidor de desenvolvimento
+npm run build        # build de produção
+npm start            # inicia o build de produção
+npm run lint         # ESLint
+npm run format:check # verifica a formatação com Prettier
+npm run typecheck    # verifica os tipos TypeScript
+npm test             # executa os testes uma vez
+npm run test:watch   # executa os testes em modo observação
+npm audit            # audita as dependências
+```
+
+## Estrutura
+
+```text
+app/                  Rotas, layout e estilos globais do Next.js
+components/dashboard/ Interface do dashboard, tabela e ações
+components/layout/    Barra superior, navegação e filtro de unidades
+data/                 Geração dos dados fictícios
+domain/dashboard/     Tipos e regras de prazo e status
+hooks/                Estado e filtros da tela
+tests/                Configuração compartilhada do Vitest
+```
+
+`generateMockResults` aceita uma seed e um horário de referência. Com os mesmos parâmetros, produz os mesmos registros. O dashboard usa uma seed fixa e o horário atual como referência.
+
+## Testes e CI
+
+Os testes usam Vitest, jsdom e Testing Library e ficam junto aos módulos que cobrem. O workflow do GitHub Actions roda em pushes e pull requests e verifica lint, formatação, tipos, testes, vulnerabilidades de dependências e build de produção.
